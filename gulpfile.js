@@ -41,7 +41,7 @@ gulp.task('publish', function (done) {
 			console.log(stderr);
 
 			// run webpack
-			webpack(prodConfig, function (err, stats) {
+			webpack(config, function (err, stats) {
 				if (err) throw new gutil.PluginError('webpack:build', err);
 				gutil.log('[webpack:build]', stats.toString({
 					colors: true
